@@ -41,18 +41,6 @@
 (package! hungry-delete)
 
 
-(when (package! eaf :recipe (:host github
-                       :repo "emacs-eaf/emacs-application-framework"
-                       :files ("*.el" "*.py" "core" "extension" "*.json")
-                       :build (:not compile)))
-
-    (package! epc)
-    (package! ctable)
-    (package! deferred)
-
-    ;;(package! eaf-browser :recipe (:host github :repo "emacs-eaf/eaf-browser" :files ("*")))
-    ;;(package! eaf-pdf-viewer :recipe (:host github :repo "emacs-eaf/eaf-pdf-viewer" :files ("*")))
-    ;;(package! eaf-video-player :recipe (:host github :repo "emacs-eaf/eaf-video-player" :files ("*")))
-    ;;(package! eaf-image-viewer :recipe (:host github :repo "emacs-eaf/eaf-image-viewer" :files ("*")))
-    ;;(package! eaf-netease-cloud-music :recipe (:host github :repo "emacs-eaf/eaf-netease-cloud-music" :files ("*")))
-)
+(package! epc)
+(package! ctable)
+(package! deferred)

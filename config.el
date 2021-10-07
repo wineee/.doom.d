@@ -59,37 +59,3 @@
 
 (add-load-path! (expand-file-name "~/.doom.d/tool"))
 (require 'init-eaf)
-
-
-(use-package! eaf
-  :load-path "~/.emacs.d/.local/straight/repos/emacs-application-framework" ; Set to "/usr/share/emacs/site-lisp/eaf" if installed from AUR
-  :config
-  ;;(use-package eaf-browser)
-  ;;(use-package eaf-pdf-viewer)
-  ;;(use-package eaf-video-player)
-  ;;(use-package eaf-image-viewer)
-  ;;(use-package eaf-netease-cloud-music)
-  (require 'eaf-file-manager)
-  (require 'eaf-browser)
-  (require 'eaf-netease-cloud-music)
-  (require 'eaf-music-player)
-  (require 'eaf-system-monitor)
-  (require 'eaf-rss-reader)
-  (require 'eaf-image-viewer)
-  (require 'eaf-pdf-viewer)
-  ;; (require 'eaf-mermaid)
-  (require 'eaf-markdown-previewer)
-  (require 'eaf-org-previewer)
-  (require 'eaf-video-player)
-
-  (defalias 'browse-web #'eaf-open-browser)
-  (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key nil "M-q" eaf-browser-keybinding) ;; unbind, see more in the Wiki
-
-  :custom
-  ; See https://github.com/emacs-eaf/emacs-application-framework/wiki/Customization
-  (eaf-browser-continue-where-left-off t)
-  (eaf-browser-enable-adblocker t)
-  (browse-url-browser-function 'eaf-open-browser)
-)
