@@ -40,7 +40,10 @@
 
 (package! hungry-delete)
 
-
+;; eaf
 (package! epc)
 (package! ctable)
 (package! deferred)
+
+(package! visual-fill-column)
+(package! rainbow-identifiers)

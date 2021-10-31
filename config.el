@@ -54,8 +54,10 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+
 (add-load-path! (expand-file-name "~/.doom.d/lisp"))
 (require 'init-better-defaults)
 
 (add-load-path! (expand-file-name "~/.doom.d/tool"))
-(require 'init-eaf)
+;;(require 'init-eaf)
+(require 'init-telega)
