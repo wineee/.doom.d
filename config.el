@@ -54,6 +54,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(global-set-key (kbd "C-s") 'swiper-isearch)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+
 (add-load-path! (expand-file-name "~/.doom.d/lisp"))
 (require 'init-better-defaults)
 
