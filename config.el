@@ -1,8 +1,6 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
-
+(setq graphic-only-plugins-setting ())
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -21,7 +19,8 @@
 ;; font string. You generally only need these two:
 (setq doom-font (font-spec :family "JetBrains Mono" :size 12 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Sarasa Mono Slab SC" :size 13))
-(doom-big-font-mode)
+
+(push '(doom-big-font-mode) graphic-only-plugins-setting)
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -35,7 +34,6 @@
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
-
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -54,10 +52,25 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-
 (add-load-path! (expand-file-name "~/.doom.d/lisp"))
 (require 'init-better-defaults)
 
 (add-load-path! (expand-file-name "~/.doom.d/tool"))
-;;(require 'init-eaf)
-(require 'init-telega)
+(push '(progn (require 'init-eaf)
+              (require 'init-telega))
+      graphic-only-plugins-setting)
+
+
+(defun graphic-p ()
+  "判断当前环境是否为图形环境"
+  (if (display-graphic-p)
+      t))
+;; 图形化插件特殊设置
+(if (not (graphic-p))
+    (add-hook 'after-make-frame-functions
+              (lambda (new-frame)
+                (select-frame new-frame)
+                (dolist (elisp-code graphic-only-plugins-setting)
+                  (eval elisp-code))))
+  (dolist (elisp-code graphic-only-plugins-setting)
+    (eval elisp-code)))
