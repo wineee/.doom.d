@@ -22,10 +22,12 @@
 
 (push '(doom-big-font-mode) graphic-only-plugins-setting)
 
-;; There are two ways to load a theme. Both assume the theme is installed and
-;; available. You can either set `doom-theme' or manually load a theme with the
-;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+;; You can either set `doom-theme' or `load-theme' function
+;; (setq doom-theme 'doom-one)
+(use-package! dracula-theme
+  :config
+  (load-theme 'dracula t))
+
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -60,13 +62,8 @@
               (require 'init-telega))
       graphic-only-plugins-setting)
 
-
-(defun graphic-p ()
-  "判断当前环境是否为图形环境"
-  (if (display-graphic-p)
-      t))
 ;; 图形化插件特殊设置
-(if (not (graphic-p))
+(if (not (display-graphic-p))
     (add-hook 'after-make-frame-functions
               (lambda (new-frame)
                 (select-frame new-frame)
