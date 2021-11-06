@@ -9,6 +9,12 @@
 ;; 开启全局 Company 补全
 (global-company-mode 1)
 
+(use-package! emacs
+    :config
+    (setq display-line-numbers-type 'relative)
+    (global-display-line-numbers-mode t))
+
+
 ;; 关闭自动缩进
 ;; (electric-indent-mode -1)
 
