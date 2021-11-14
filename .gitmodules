@@ -1,0 +1,13 @@
+[submodule "site-lisp/netease-cloud-music.el"]
+	path = site-lisp/netease-cloud-music.el
+	url = https://github.com/SpringHan/netease-cloud-music.el.git
+[submodule "site-lisp/emacs-application-framework"]
+	path = site-lisp/emacs-application-framework
+	url = https://github.com/emacs-eaf/emacs-application-framework.git
+[submodule "site-lisp/telega.el"]
+        path = site-lisp/telega.el
+        url = https://github.com/zevlg/telega.el.git
+[submodule "site-lisp/popweb"]
+        path = site-lisp/popweb
+        url = https://github.com/manateelazycat/popweb.git
+

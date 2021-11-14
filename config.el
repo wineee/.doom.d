@@ -57,13 +57,27 @@
 (global-set-key (kbd "C-s") 'swiper-isearch)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 
+(defun add-subdirs-to-load-path (dir)
+  "Recursive add directories to `load-path'."
+  (let ((default-directory (file-name-as-directory dir)))
+    (add-to-list 'load-path dir)
+    (normal-top-level-add-subdirs-to-load-path)
+    (dolist (path load-path)
+      (when (or (string-match-p "/node_modules" path)
+                (string-match-p "/dist" path))
+        (setq load-path (delete path load-path))))))
+
+;; (add-subdirs-to-load-path "~/.doom.d/site-lisp")
+
 (add-load-path! (expand-file-name "~/.doom.d/lisp"))
 (require 'init-better-defaults)
 
 (add-load-path! (expand-file-name "~/.doom.d/tool"))
 (push '(progn (require 'init-eaf)
-              (require 'init-telega))
+              (require 'init-telega)
+	      (require 'init-popweb))
       graphic-only-plugins-setting)
+
 
 ;; 图形化插件特殊设置
 (if (not (display-graphic-p))
