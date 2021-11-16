@@ -4,4 +4,8 @@
 (require 'popweb-dict-youdao)
 (require 'popweb-katex)
 
+(map! :prefix "t"
+      :desc "input youdao dict" :nv ";" #'popweb-dict-youdao-input
+      :desc "pointer bing dict" :nv "y" #'popweb-dict-bing-pointer)
+
 (provide 'init-popweb)
