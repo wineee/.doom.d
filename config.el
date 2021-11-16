@@ -77,7 +77,7 @@
               (require 'init-telega)
 	      (require 'init-popweb))
       graphic-only-plugins-setting)
-
+(require 'init-ncm)
 
 ;; 图形化插件特殊设置
 (if (not (display-graphic-p))

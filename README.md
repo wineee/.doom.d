@@ -1,4 +1,4 @@
 # .doom.d
-my doom emacs config
+my doom emacs configq
 
 [old config](https://github.com/wineee/.emacs.d)
