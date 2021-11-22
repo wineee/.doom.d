@@ -2,7 +2,6 @@
 
 (require 'popweb-dict-bing)
 (require 'popweb-dict-youdao)
-(require 'popweb-katex)
 
 (map! :prefix "t"
       :desc "input youdao dict" :nv ";" #'popweb-dict-youdao-input
