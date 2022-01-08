@@ -1,4 +1,6 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+(setq-default  tab-width 4) ;; 表示一个 tab 4个字符宽
+(setq-default indent-tabs-mode nil) ;; nil 表示将 tab 替换成空格
 
 (setq graphic-only-plugins-setting ())
 
