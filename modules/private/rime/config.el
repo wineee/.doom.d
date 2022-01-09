@@ -1,5 +1,16 @@
 ;;; tool/init-reveal.el -*- lexical-binding: t; -*-
 
+;; in NixOS
+;; nix-shell -p gcc librime cmake rime-data
+
+(use-package! rime
+  :custom
+  (rime-emacs-module-header-root "/nix/store/vvxcs4f8x14gyahw50ssff3sk2dij2b3-emacs-27.2/include/")
+  (rime-user-data-dir "~/.doom.d/rime")
+  (rime-share-data-dir "/nix/store/hnv0fx8sfrbrw1mj559x61vrvk7qidv5-rime-data-0.38.20210628/share/rime-data/")
+  )
+
+
 ;; 设置哪些组合键将发送至 Rime 。可以用来配合方案中的设置完成光标移动和选字等功能
 (setq rime-translate-keybindings
       '("C-f" "C-b" "C-n" "C-p" "C-g" "<left>" "<right>" "<up>" "<down>" "<prior>" "<next>" "<delete>"))
