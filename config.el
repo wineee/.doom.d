@@ -1,5 +1,5 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-(setq-default  tab-width 4) ;; 表示一个 tab 4个字符宽
+(setq-default tab-width 4) ;; 表示一个 tab 4个字符宽
 (setq-default indent-tabs-mode nil) ;; nil 表示将 tab 替换成空格
 
 (setq graphic-only-plugins-setting ())
@@ -19,10 +19,13 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "JetBrains Mono" :size 12 :weight 'regular)
-      doom-variable-pitch-font (font-spec :family "Sarasa Mono Slab SC" :size 13))
+(setq
+ doom-font (font-spec :family "JetBrains Mono" :size 16 :weight 'regular)
+ doom-big-font (font-spec :family "JetBrains Mono" :size 19)
+ doom-variable-pitch-font (font-spec :family "JetBrains Mono" :size 16)
+ doom-serif-font (font-spec :family "JetBrains Mono" :size 16))
 
-(push '(doom-big-font-mode) graphic-only-plugins-setting)
+;; (push '(doom-big-font-mode) graphic-only-plugins-setting)
 
 ;; You can either set `doom-theme' or `load-theme' function
 ;; (setq doom-theme 'doom-one)
