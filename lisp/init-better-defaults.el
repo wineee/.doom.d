@@ -9,6 +9,8 @@
 ;; 开启全局 Company 补全
 (global-company-mode 1)
 
+;; This determines the style of line numbers in effect. If set to `nil', line
+;; numbers are disabled. For relative line numbers, set this to `relative'.
 (use-package! emacs
     :config
     (setq display-line-numbers-type 'relative)
@@ -33,7 +35,7 @@
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
 ;; 自动切换透明度
-;; (set-frame-parameter nil 'alpha '(90 . 85))
+(set-frame-parameter nil 'alpha '(90 . 85))
 (defun rew/toggle-frame-transparency ()
   (interactive)
   (if (equal (frame-parameter nil 'alpha) 100)

@@ -172,7 +172,7 @@
        ;;zig               ; C, but simpler
 
        :email
-       (mu4e +org +gmail)
+       ;; (mu4e +org +gmail)
        ;;notmuch
        ;;(wanderlust +gmail)
 
@@ -189,7 +189,7 @@
        (default +bindings +smartparens)
 
        :private
-       rime
-       blamer   ;A git blame plugin for emacs inspired by VS Code's GitLens plugin
-       blog
+       ;;rime
+       ;;blamer   ;A git blame plugin for emacs inspired by VS Code's GitLens plugin
+       ;;blog
        )

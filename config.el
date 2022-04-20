@@ -30,14 +30,8 @@
   :config
   (load-theme 'dracula t))
 
-
-;; If you use `org' and don't want your org files in the default location below,
-;; change `org-directory'. It must be set before org loads!
+;; It must be set before org loads!
 (setq org-directory "~/org/")
-
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -72,14 +66,14 @@
 ;; (add-subdirs-to-load-path "~/.doom.d/site-lisp")
 
 (add-load-path! (expand-file-name "~/.doom.d/lisp"))
-(require 'init-better-defaults)
+;;(require 'init-better-defaults)
 
 (add-load-path! (expand-file-name "~/.doom.d/tool"))
 (push '(progn (require 'init-eaf)
-              (require 'init-telega)
+              ;; (require 'init-telega)
 	      (require 'init-popweb))
       graphic-only-plugins-setting)
-(require 'init-ncm)
+;; (require 'init-ncm)
 
 ;; 图形化插件特殊设置
 (if (not (display-graphic-p))

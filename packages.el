@@ -34,17 +34,15 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-  (setq package-archives '(("gnu"   . "http://elpa.zilongshanren.com/gnu/")
-                           ("melpa" . "http://elpa.zilongshanren.com/melpa/")))
-
-(package! hungry-delete)
+(setq package-archives '(("gnu"   . "http://elpa.zilongshanren.com/gnu/")
+			 ("melpa" . "http://elpa.zilongshanren.com/melpa/")))
 
 (package! dracula-theme)
 
 ;; eaf
-(package! epc)
-(package! ctable)
-(package! deferred)
+;;(package! epc)
+;;(package! ctable)
+;;(package! deferred)
 
-(package! visual-fill-column)
-(package! rainbow-identifiers)
+;;(package! visual-fill-column)
+;;(package! rainbow-identifiers)
