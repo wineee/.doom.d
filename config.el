@@ -73,7 +73,6 @@
 
 (add-load-path! (expand-file-name "~/.doom.d/tool"))
 (push '(progn (require 'init-eaf)
-              ;; (require 'init-telega)
 	      (require 'init-popweb))
       graphic-only-plugins-setting)
 ;; (require 'init-ncm)
