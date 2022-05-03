@@ -1,4 +1,4 @@
-(use-package eaf
+(use-package! eaf
   :load-path "~/.doom.d/site-lisp/emacs-application-framework"
   :config
   ;;(use-package eaf-video-player)
