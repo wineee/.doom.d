@@ -72,8 +72,8 @@
 ;;(require 'init-better-defaults)
 
 (add-load-path! (expand-file-name "~/.doom.d/tool"))
-(push '(progn ;; (require 'init-eaf)
-	      ;; (require 'init-popweb)
+(push '(progn (require 'init-lsp-bridge)
+	      ;; (require 'init-eaf)
 	      )
       graphic-only-plugins-setting)
 
