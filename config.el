@@ -25,7 +25,7 @@
  doom-variable-pitch-font (font-spec :family "JetBrains Mono" :size 16)
  doom-serif-font (font-spec :family "JetBrains Mono" :size 16))
 
-;; (push '(doom-big-font-mode) graphic-only-plugins-setting)
+(push '(doom-big-font-mode) graphic-only-plugins-setting)
 
 ;; You can either set `doom-theme' or `load-theme' function
 ;; (setq doom-theme 'doom-one)
@@ -72,8 +72,9 @@
 ;;(require 'init-better-defaults)
 
 (add-load-path! (expand-file-name "~/.doom.d/tool"))
-(push '(progn (require 'init-eaf)
-	      (require 'init-popweb))
+(push '(progn ;; (require 'init-eaf)
+	      ;; (require 'init-popweb)
+	      )
       graphic-only-plugins-setting)
 
 ;; 图形化插件特殊设置
