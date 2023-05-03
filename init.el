@@ -192,4 +192,5 @@
        ;;rime
        ;;blamer   ;A git blame plugin for emacs inspired by VS Code's GitLens plugin
        ;;blog
+       vala
        )
