@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "rewine"
-      user-mail-address "lhongxu@outlook.com")
+      user-mail-address "luhongxu@deepin.org")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -69,7 +69,7 @@
 ;; (add-subdirs-to-load-path "~/.doom.d/site-lisp")
 
 (add-load-path! (expand-file-name "~/.doom.d/lisp"))
-;;(require 'init-better-defaults)
+(require 'init-better-defaults)
 
 (add-load-path! (expand-file-name "~/.doom.d/tool"))
 (push '(progn (require 'init-lsp-bridge)
