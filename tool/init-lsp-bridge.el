@@ -19,7 +19,8 @@
       :desc "LSP Find declaration"
       "j"             #'lsp-bridge-find-def)
 
-(setq lsp-bridge-enable-log 1)
+(lsp-bridge-enable-log 1)
+(global-company-mode 0)
 
 (provide 'init-lsp-bridge)
 
