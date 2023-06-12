@@ -2,11 +2,11 @@
   :load-path "~/.doom.d/site-lisp/emacs-application-framework"
   :config
   ;;(use-package eaf-video-player)
-  (require 'eaf-file-manager)
+  ;;(require 'eaf-file-manager)
   (require 'eaf-browser nil t)
-  (require 'eaf-netease-cloud-music)
+  ;;(require 'eaf-netease-cloud-music)
   (require 'eaf-music-player)
-  (require 'eaf-system-monitor)
+  ;;(require 'eaf-system-monitor)
   ;;(require 'eaf-rss-reader)
   (require 'eaf-image-viewer)
   (require 'eaf-pdf-viewer)
