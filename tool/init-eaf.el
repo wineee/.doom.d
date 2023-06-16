@@ -27,11 +27,11 @@
   (eaf-browser-continue-where-left-off t)
   (eaf-start-python-process-when-require t)
   (eaf-browser-default-zoom 1.25)
-  (eaf-browser-dark-mode nil)
   (eaf-browser-enable-adblocker t)
   (eaf-browser-enable-autofill t)
   (eaf-file-manager-show-preview t)
   (eaf-pdf-dark-mode "ignore")
+  (eaf-browser-dark-mode "follow")
 )
 
 
