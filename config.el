@@ -69,14 +69,14 @@
 
 ;; (add-subdirs-to-load-path "~/.doom.d/site-lisp")
 
-(add-load-path! (expand-file-name "~/.doom.d/lisp"))
+(add-load-path! (expand-file-name "~/.config/doom/lisp"))
 (require 'init-better-defaults)
 
-(add-load-path! (expand-file-name "~/.doom.d/tool"))
+(add-load-path! (expand-file-name "~/.config/doom/tool"))
 
-(push '(progn (require 'init-eaf)
-	      )
-      graphic-only-plugins-setting)
+;; (push '(progn (require 'init-eaf)
+;;	      )
+;;      graphic-only-plugins-setting)
 
 ;; 图形化插件特殊设置
 (if (not (display-graphic-p))
