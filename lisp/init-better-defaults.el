@@ -32,11 +32,15 @@
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
 ;; 自动切换透明度
-(set-frame-parameter nil 'alpha '(90 . 85))
-(defun rew/toggle-frame-transparency ()
+(set-frame-parameter nil 'alpha-background 90)
+(defun rew/toggle-frame-transparency()
+  "在 100（不透明）和 90（部分透明）之间切换背景透明度。"
   (interactive)
-  (if (equal (frame-parameter nil 'alpha) 100)
-      (set-frame-parameter nil 'alpha '(90 . 85))
-    (set-frame-parameter nil'alpha 100)))
+  (let ((current-alpha (frame-parameter nil 'alpha-background)))
+    (set-frame-parameter nil 'alpha-background
+                        (if (= (or current-alpha 100) 100) 90 100))))
+
+;; 绑定到快捷键，例如 C-c t
+(global-set-key (kbd "C-c t") 'toggle-transparency)
 
 (provide 'init-better-defaults)
